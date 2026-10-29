@@ -1,0 +1,305 @@
+/* =========================================
+   COLORES
+   ========================================= */
+
+:root {
+    --dorado: #fcda00;
+    --negro: #000000;
+    --blanco: #ffffff;
+}
+
+
+/* =========================================
+   PÁGINA
+   ========================================= */
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--negro);
+
+    color: var(--blanco);
+
+    padding-top: 100px;
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.pagina {
+    width: 100%;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+   ========================================= */
+
+.parte1 {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto 70px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+   ========================================= */
+
+.titulo {
+    color: var(--dorado);
+
+    font-size: 38px;
+
+    margin-bottom: 35px;
+
+    animation: titulo 1.5s ease forwards;
+}
+
+
+@keyframes titulo {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   TEXTO PRINCIPAL
+   ========================================= */
+
+.texto1 {
+    background: #151515;
+
+    color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 0 20px rgba(252, 218, 0, 0.12);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+.texto1 h2 {
+    color: var(--dorado);
+
+    margin-top: 0;
+
+    font-size: 27px;
+}
+
+
+.texto1 p {
+    margin: 18px 0;
+}
+
+
+.texto1 strong {
+    color: var(--dorado);
+}
+
+
+/* =========================================
+   SECCIÓN BIOGRAFÍAS
+   ========================================= */
+
+.parte2 {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO BIOGRAFÍAS
+   ========================================= */
+
+.titulo2 {
+    color: var(--dorado);
+
+    font-size: 30px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   CONTENEDOR DEL EQUIPO
+   ========================================= */
+
+.equipo {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   TARJETA DE CADA PERSONA
+   ========================================= */
+
+.tarjeta-miembro {
+    background: #151515;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 0 15px rgba(252, 218, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.tarjeta-miembro:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--dorado);
+
+    box-shadow:
+        0 5px 20px rgba(252, 218, 0, 0.20);
+}
+
+
+/* =========================================
+   APODO
+   ========================================= */
+
+.tituloC {
+    color: var(--dorado);
+
+    font-size: 25px;
+
+    margin-top: 0;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   NOMBRE
+   ========================================= */
+
+.tarjeta-miembro h3 {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    margin-top: 5px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
+
+.textoC {
+    background: #242424;
+
+    color: #dddddd;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border-left: 3px solid var(--dorado);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    color: #bbbbbb;
+
+    text-align: center;
+
+    padding: 18px;
+
+    background: #111;
+
+    border-top: 1px solid var(--dorado);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding-top: 90px;
+    }
+
+    .parte1,
+    .parte2 {
+        width: 94%;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .texto1 {
+        padding: 25px;
+
+        font-size: 16px;
+    }
+
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo2 {
+        font-size: 24px;
+    }
+}

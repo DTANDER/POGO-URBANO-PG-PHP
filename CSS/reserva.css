@@ -1,0 +1,395 @@
+/* =========================================
+   COLORES
+   ========================================= */
+
+:root {
+    --dorado: #fcda00;
+    --negro: #000000;
+    --blanco: #ffffff;
+}
+
+
+/* =========================================
+   PÁGINA
+   ========================================= */
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--negro);
+
+    color: var(--blanco);
+
+    padding-top: 100px;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+
+.contenedor {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 80vh;
+
+    gap: 35px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   FORMULARIO DE RESERVA
+   ========================================= */
+
+.reservacion {
+    width: 90%;
+
+    max-width: 550px;
+
+    box-sizing: border-box;
+
+    background: #151515;
+
+    color: var(--blanco);
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 0 20px rgba(252, 218, 0, 0.15);
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.reservacion h2 {
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: var(--dorado);
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   ETIQUETAS
+   ========================================= */
+
+.reservacion label {
+    display: block;
+
+    text-align: left;
+
+    margin: 18px 0 7px;
+
+    font-weight: bold;
+
+    color: var(--blanco);
+}
+
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+.reservacion input,
+.reservacion select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    background: #242424;
+
+    color: var(--blanco);
+
+    border: 2px solid #444;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   CAMPOS AL SELECCIONAR
+   ========================================= */
+
+.reservacion input:focus,
+.reservacion select:focus {
+
+    border-color: var(--dorado);
+
+    box-shadow:
+        0 0 8px rgba(252, 218, 0, 0.35);
+}
+
+
+/* =========================================
+   CAMPOS BLOQUEADOS
+   ========================================= */
+
+.reservacion input[readonly] {
+    background: #1d1d1d;
+
+    color: #bbbbbb;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.reservacion select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+
+.reservacion button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px;
+
+    background: var(--dorado);
+
+    color: var(--negro);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   BOTÓN HOVER
+   ========================================= */
+
+.reservacion button:hover {
+    background: var(--blanco);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(252, 218, 0, 0.25);
+}
+
+
+/* =========================================
+   INFORMACIÓN
+   ========================================= */
+
+.informacion {
+    width: 90%;
+
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* TÍTULOS DE INFORMACIÓN */
+
+.informacion h3 {
+    color: var(--dorado);
+
+    font-size: 21px;
+
+    margin: 10px 0;
+}
+
+
+/* PÁRRAFO */
+
+.informacion p {
+    color: #bbbbbb;
+
+    font-size: 16px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   MENSAJE DE ÉXITO
+   ========================================= */
+
+.mensaje-exito {
+    margin: 15px 0;
+
+    padding: 15px;
+
+    border: 1px solid #2ecc71;
+
+    background: #12351f;
+
+    color: #8ff0b0;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MENSAJE DE ERROR
+   ========================================= */
+
+.mensaje-error {
+    margin: 15px 0;
+
+    padding: 15px;
+
+    border: 1px solid #ff4444;
+
+    background: #351414;
+
+    color: #ff9999;
+
+    border-radius: 8px;
+}
+
+
+/* ERRORES */
+
+.mensaje-error p {
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #111;
+
+    color: #bbbbbb;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 14px;
+
+    border-top: 1px solid var(--dorado);
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 90px;
+    }
+
+    .contenedor {
+        gap: 20px;
+    }
+
+    .reservacion {
+        width: 94%;
+
+        padding: 25px 20px;
+    }
+
+    .reservacion h2 {
+        font-size: 26px;
+    }
+
+    .informacion {
+        width: 94%;
+    }
+}
+
+/* ===== Mensajes de error / éxito (antes en <style> de reserva.php) ===== */
+
+    .mensaje-error {
+
+        margin: 15px 0;
+        padding: 15px;
+
+        border: 2px solid #ff0000;
+
+        background: #250000;
+
+        color: #ff5555;
+
+        border-radius: 8px;
+
+    }
+
+
+    .mensaje-error p {
+
+        margin: 5px 0;
+
+    }
+
+
+    .mensaje-exito {
+
+        margin: 15px 0;
+        padding: 15px;
+
+        border: 2px solid #00cc66;
+
+        background: #002b18;
+
+        color: #66ff99;
+
+        border-radius: 8px;
+
+    }

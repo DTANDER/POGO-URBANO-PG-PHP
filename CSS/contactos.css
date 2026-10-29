@@ -1,0 +1,98 @@
+/* ==============================
+   CONTACTOS
+   ============================== */
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 40px 60px;
+    min-height: 60vh;
+}
+
+/* REDES SOCIALES */
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.redes a {
+    display: block;
+}
+
+.redes img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.redes img:hover {
+    transform: scale(1.15);
+}
+
+/* INFORMACIÓN CENTRAL */
+
+/* INFORMACIÓN CENTRAL (CUADRO) */
+
+.info {
+    flex: 1;
+    max-width: 800px;
+
+    background: #151515;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 20px;
+
+    padding: 40px 50px;
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.12);
+
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.info h1 {
+    color: #ffd700;
+    margin-bottom: 25px;
+}
+
+.info p {
+    margin-bottom: 20px;
+}
+
+.info strong {
+    color: #ffd700;
+}
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .redes {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .redes img {
+        width: 50px;
+        height: 50px;
+    }
+}
