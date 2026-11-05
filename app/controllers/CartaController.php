@@ -37,7 +37,7 @@ class CartaController extends Controller
             "categorias"      => $categorias,
             "error"           => $error,
             "imagenes"        => require __DIR__ . "/../config/imagenes.php",
-            "imagenDefecto"   => "media/img/carta/sin-imagen.png",
+            "imagenDefecto" => "media/carta/sin-imagen.png",
         ], "main");
     }
 }
