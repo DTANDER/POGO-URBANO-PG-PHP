@@ -1,113 +1,224 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* =========================================
+   COLORES
+   ========================================= */
+
+:root {
+    --dorado: #ffd700;
+    --negro: #000000;
+    --blanco: #ffffff;
 }
 
-body{
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+
+/* =========================================
+   RESET Y PÁGINA
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.contenedor{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
+body {
+    background: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.caja-registro{
-    background:#fff;
-    width:420px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(255,215,0,.35);
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
 
-.logo{
-    display:block;
-    width:170px;
-    margin:0 auto 20px;
+
+/* =========================================
+   CAJA DE REGISTRO (igual que .reservacion)
+   ========================================= */
+
+.caja-registro {
+    width: 90%;
+    max-width: 550px;
+    background: #151515;
+    color: var(--blanco);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(252, 218, 0, 0.15);
 }
 
-h2{
-    text-align:center;
-    margin-bottom:25px;
-    color:#000;
+.logo {
+    display: block;
+    width: 300px;
+    margin: 0 auto 0px;
 }
 
-form{
-    display:flex;
-    flex-direction:column;
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.caja-registro h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--dorado);
+    font-size: 30px;
 }
 
-label{
-    margin-top:12px;
-    margin-bottom:6px;
-    font-weight:bold;
-    color:#000;
+
+/* =========================================
+   FORMULARIO Y ETIQUETAS
+   ========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-input{
-    padding:12px;
-    border:2px solid #ffd700;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-    transition:.3s;
+label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 18px 0 7px;
+    font-weight: bold;
+    color: var(--blanco);
 }
 
-input:focus{
-    border-color:#c9a000;
-    box-shadow:0 0 8px #ffd700;
+label:first-of-type {
+    margin-top: 0;
 }
 
-button{
-    margin-top:25px;
-    padding:14px;
-    border:none;
-    border-radius:8px;
-    background:#FFD700;
-    color:#000;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    background: #242424;
+    color: var(--blanco);
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
 }
 
-button:hover{
-    background:#e0bd00;
+input::placeholder {
+    color: #888;
 }
 
-.volver{
-    text-align:center;
-    margin-top:20px;
+input:focus {
+    border-color: var(--dorado);
+    box-shadow: 0 0 8px rgba(252, 218, 0, 0.35);
 }
 
-.volver a{
-    color:#c9a000;
-    font-weight:bold;
-    text-decoration:none;
+/* Evita que el autocompletado del navegador ponga el campo blanco */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #242424 inset;
+    -webkit-text-fill-color: var(--blanco);
 }
 
-.volver a:hover{
-    text-decoration:underline;
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background: var(--dorado);
+    color: var(--negro);
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-@media(max-width:480px){
+button:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(252, 218, 0, 0.25);
+}
 
-    .caja-registro{
-        width:100%;
-        padding:25px;
+
+/* =========================================
+   ENLACE "YA TIENES CUENTA"
+   ========================================= */
+
+.volver {
+    text-align: center;
+    margin-top: 20px;
+    color: #bbbbbb;
+}
+
+.volver a {
+    color: var(--dorado);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.volver a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MENSAJES DE ÉXITO Y ERROR
+   ========================================= */
+
+.mensaje-exito {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #2ecc71;
+    background: #12351f;
+    color: #8ff0b0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensaje-error {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ff4444;
+    background: #351414;
+    color: #ff9999;
+    border-radius: 8px;
+}
+
+.mensaje-error p {
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .caja-registro {
+        width: 94%;
+        padding: 25px 20px;
     }
 
-    .logo{
-        width:140px;
+    .caja-registro h2 {
+        font-size: 26px;
     }
 
+    .logo {
+        width: 140px;
+    }
 }

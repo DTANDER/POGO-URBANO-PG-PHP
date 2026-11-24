@@ -22,7 +22,7 @@
 
                 <p>
                     El proyecto fue creado por
-                    <strong>Charawi, Diezki, Chomby, Yaqui y Yexiz</strong>,
+                    <strong>Anderson, Samuel, Diomedez y Yessi</strong>,
                     quienes impulsaron esta iniciativa con la visión de aportar innovación
                     al sector gastronómico en Medellín y proyectarlo hacia todo el país.
                 </p>

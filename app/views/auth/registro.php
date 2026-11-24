@@ -36,11 +36,11 @@
     <div class="caja-registro">
 
 
-        <img
-            src="media/img/logo_2.png"
-            alt="Logo Pogo Urbano"
-            class="logo"
-        >
+    <img
+        src="media/img/logo_alternativo_blancoamar.png"
+        alt="Logo Pogo Urbano"
+        class="logo"
+    >
 
 
         <h2>
